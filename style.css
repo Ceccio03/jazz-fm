@@ -4,12 +4,63 @@ body *{
 
 body{
     margin: 0px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .first-section{
     background-color: #ffcc00;
     width: 100vw;
     height: 100vh;
+}
+
+.second-section{
+    background-color: #660099;
+}
+
+.contatti{
+    display: grid;
+    background-color: #ffcc00;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 100px 100%;
+    grid-template-areas: "contatti circle-img" "contatti list";
+}
+
+.title{
+    grid-area: contatti;
+}
+
+h1{
+    font-size: 200px;
+    margin: 0;
+}
+
+.circle{
+    display: grid;
+    justify-content: right;
+    grid-area: circle-img;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.circle-img{
+    width: 250px;
+    justify-items: right;
+    display: grid;
+}
+
+.contact-list{
+    margin-top: 300px;
+    margin-bottom: 100px;
+    grid-area: list;
+}
+
+.eye{
+    display: grid;
+    justify-items: center;
+}
+
+.eye-img{
+    margin: 20px;
 }
 
 .last-section{
