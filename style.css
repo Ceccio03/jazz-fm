@@ -273,13 +273,13 @@ h1{
 .circle{
     background-color: black;
     display: grid;
-    justify-content: right;
     grid-area: circle;
     border-radius: 82px;
     height: 164px;
     width: 164px;
     padding: 32px;
     margin: 32px;
+    justify-self: end;
 }
 
 .contact-list{
