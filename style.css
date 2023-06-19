@@ -8,12 +8,95 @@ body{
 }
 
 .first-section{
+    display: grid;
     background-color: #ffcc00;
     width: 100vw;
     height: 100vh;
+    grid-template-rows: 280px 1fr 150px;
+    grid-template-columns: 280px 1fr 100vh;
+    grid-template-areas: "logo . play" ". . play" "ost . play";
+}
+
+@media (max-width: 768px){
+    .first-section{
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 280px 1fr 150px;
+        grid-template-areas: "logo" "play" "info";
+    }
+
+    .logo-img{
+        max-width: 200px;
+    }
+
+    .play-img{
+        padding: 32px;
+    }
+}
+
+.logo-img{
+    grid-area: logo;
+    padding: 32px;
+    width: 100%;
+}
+
+.play-img{
+    grid-area: play;
+    height: 100%;
+    max-width: 100%;
+}
+
+.info{
+    grid-area: ost;
+    display: flex;
+    flex-direction: column;
+    padding: 32px;
+}
+
+.label{
+    text-transform: uppercase;
+}
+
+.artist{
+    margin-top: 8px;
+    font-weight: bold;
+    font-size: xx-large;
+}
+
+.song{
+    font-size: x-large;
 }
 
 .second-section{
+    background-color: #660099;
+}
+
+.fourth-section{
+    background-color: #660099;
+}
+
+.schedule{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(6, auto);
+    grid-template-areas: "title title circle" ". . ." ". . ." ". . ." ". . ." ". . .";
+}
+
+.schedule-title{
+    grid-area: title;
+    font-size: 100px;
+    font-weight: bold;
+    margin: 0;
+    padding: 32px;
+}
+
+.piano{
+    display: grid;
+    background-color: #ffcc00;
+    justify-content: center;
+}
+
+.seventh-section{
     background-color: #660099;
 }
 
@@ -35,17 +118,15 @@ h1{
 }
 
 .circle{
+    background-color: black;
     display: grid;
     justify-content: right;
-    grid-area: circle-img;
-    margin-top: 30px;
-    margin-bottom: 30px;
-}
-
-.circle-img{
-    width: 250px;
-    justify-items: right;
-    display: grid;
+    grid-area: circle;
+    border-radius: 82px;
+    height: 164px;
+    width: 164px;
+    padding: 32px;
+    margin: 32px;
 }
 
 .contact-list{
