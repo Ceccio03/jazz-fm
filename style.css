@@ -7,6 +7,13 @@ body{
     font-family: Arial, Helvetica, sans-serif;
 }
 
+.row{
+    border-bottom: 1px solid grey;
+    padding: 32px;
+}
+
+/* FIRST-SECTION */
+
 .first-section{
     display: grid;
     background-color: #ffcc00;
@@ -67,28 +74,170 @@ body{
     font-size: x-large;
 }
 
-.second-section{
+/* IMG1 */
+
+.img1{
     background-color: #660099;
 }
 
-.fourth-section{
+/* SECOND-SECTION */
+
+.second-section{
+    background-color: #ffcc00;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(5, auto);
+    grid-template-areas: "s2-title s2-title s2-circle" "j-img j-img fm" "online a-img a-img" ". . ." "z-container z-container z-container";
+}
+
+.s2-title{
+    grid-area: s2-title;
+}
+
+.s2-circle{
+    grid-area: s2-circle;
+}
+
+.j-img{
+    grid-area: j-img;
+    width: 100%;
+    padding: 32px;
+}
+
+.fm{
+    grid-area: fm;
+}
+
+.row-flex{
+    display: flex;
+    justify-content: space-between;
+}
+
+.row-title{
+    font-size: 100px;
+    margin: 0px;
+}
+
+.online{
+    grid-area: online;
+}
+
+.a-img{
+    grid-area: a-img;
+    width: 100%;
+    padding: 32px;
+}
+
+.z-img{
+    flex: 1;
+    padding: 32px;
+    width: 50%;
+}
+
+.z-container{
+    grid-area: z-container;
+    display: flex;
+    max-width: 100%;
+
+}
+
+@media (max-width: 768px){
+    .second-section{
+        grid-template-rows: repeat(7, auto);
+        grid-template-columns: 100%;
+        grid-template-areas: "s2-title" "j-img" "fm" "online" "a-img" "z-container" "devices";
+    }
+
+    .title{
+        font-size: 110px;
+    }
+
+    .j-img{
+        margin-top: -150px;
+    }
+}
+
+/* IMG2 */
+
+.img2{
     background-color: #660099;
 }
+
+/* SCHEDULE */
 
 .schedule{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: repeat(6, auto);
-    grid-template-areas: "title title circle" ". . ." ". . ." ". . ." ". . ." ". . .";
+    grid-template-areas: "schedule-title schedule-title schedule-circle" ". . p1" "p2 p3 ." ". p4 ." ". . p5" "p6 p7 .";
+    gap: 8px;
 }
 
 .schedule-title{
-    grid-area: title;
+    grid-area: schedule-title;
     font-size: 100px;
     font-weight: bold;
     margin: 0;
     padding: 32px;
 }
+
+.schedule-circle circle{
+    background-color: black;
+    display: grid;
+    justify-content: right;
+    grid-area: schedule-circle;
+    border-radius: 82px;
+    height: 164px;
+    width: 164px;
+    padding: 32px;
+    margin: 32px;
+}
+
+.program{
+
+}
+
+.p1{
+    grid-area: p1;
+}
+
+.p2{
+    grid-area: p2;
+}
+
+.p3{
+    grid-area: p3;
+}
+
+.p4{
+    grid-area: p4;
+}
+
+.p5{
+    grid-area: p5;
+}
+
+.p6{
+    grid-area: p6;
+}
+
+.p7{
+    grid-area: p7;
+}
+
+@media (max-width: 768px){
+    .schedule{
+        grid-template-rows: repeat(8, auto);
+        grid-template-columns: 100%;
+        grid-template-areas: "title" "p1" "p2" "p3" "p4" "p5" "p6" "p7";
+    }
+
+    .schedule-title{
+        font-size: 110px;
+    }
+}
+
+/* PIANO */
 
 .piano{
     display: grid;
@@ -96,9 +245,13 @@ body{
     justify-content: center;
 }
 
-.seventh-section{
+/* IMG3 */
+
+.img3{
     background-color: #660099;
 }
+
+/* CONTATTI */
 
 .contatti{
     display: grid;
@@ -108,7 +261,7 @@ body{
     grid-template-areas: "contatti circle-img" "contatti list";
 }
 
-.title{
+.contact-title{
     grid-area: contatti;
 }
 
